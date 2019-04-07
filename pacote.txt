@@ -1,0 +1,32 @@
+while True:
+    pacote = int(input("Qual o tamanho, em Bytes, do pacote a ser enviado no modelo TCP/IP? "))
+    divisor = 1.1
+    frame = 1500
+    pkg = pacote
+    cont = 0
+  
+    if pacote != 0:
+        print("Pacote de %d bytes identificado e pronto!" % pacote)
+        if pacote > 1024:
+            print("Pacote maior do que %d bytes. Precisa ser dividido!" % frame)
+            
+            while divisor > 1:
+                pkg =  pkg - frame                      
+                divisor = pkg/frame 
+                cont += 1
+                print("Reduzindo pacote para envio ... %d" % pkg)
+                
+                if divisor < 1:
+                    resultado = pacote - (cont * frame)
+                    print("                                ")
+                    print(" \o/ Divisão feita com sucesso!")
+                    print("_____________________________________")
+                    print(">>> Preparando %d pedaços de %d bytes e 1 pedaço de %d bytes" % (cont, frame, resultado))
+                    print("Pacote de %d dividido e enviado com sucesso!" % pacote)
+        else:
+            print("Pacote de %d enviado com sucesso!" % pacote)
+    else:
+        print("Valor invalido!")
+        break
+
+
