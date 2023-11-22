@@ -19,7 +19,7 @@ while True:
                 if divisor < 1:
                     resultado = pacote - (cont * frame)
                     print("                                ")
-                    print(" \o/ Divisão feita com sucesso!")
+                    print(" Divisão feita com sucesso!")
                     print("_____________________________________")
                     print(">>> Preparando %d pedaços de %d bytes e 1 pedaço de %d bytes" % (cont, frame, resultado))
                     print("Pacote de %d dividido e enviado com sucesso!" % pacote)
