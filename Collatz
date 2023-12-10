@@ -1,0 +1,15 @@
+#conjecture of collatz python demo
+c0 = int(input("Digite um numero inteiro nao negativo: "))
+count = 0
+while c0 > 0:
+    if c0 ==1:
+        break
+    elif c0 % 2 == 0:
+        c0 = c0/2
+        count+=1
+        print(int(c0))
+    else:
+        c0 = 3 * c0 +1
+        count+=1
+        print(int(c0))
+print('numero de passos: ', count)
